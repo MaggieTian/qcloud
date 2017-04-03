@@ -3,8 +3,6 @@
 const express = require('express');
 const router = express.Router();
 var mongoose = require('mongoose');
-<<<<<<< HEAD
-=======
 var sd = require('silly-datetime');
 var ObjectID = require('mongodb').ObjectID;
 var comment=require("../model/comment_model");
