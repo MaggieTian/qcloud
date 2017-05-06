@@ -14,6 +14,7 @@ var resData="";
 //test index
 router.get('/', require('./welcome'));
 router.get('/user', require('./user'));
+router.get('/login', require('./login'));
 router.all('/tunnel', require('./tunnel'));
 
 //find comment record by page size
