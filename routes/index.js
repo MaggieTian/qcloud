@@ -1,7 +1,7 @@
 'use strict';
 
-// const express = require('express');
-// const router = express.Router();
+ const express = require('express');
+ const router = express.Router();
 // var mongoose = require('mongoose');
 // var sd = require('silly-datetime');
 // var ObjectID = require('mongodb').ObjectID;
@@ -12,7 +12,7 @@
 // var userModel=require("../model/user_model");
 // var resData="";
 
-var express = require('express');
+//var express = require('express');
 var mongoose = require('mongoose');
 var sd = require('silly-datetime');
 var ObjectID = require('mongodb').ObjectID;
@@ -21,8 +21,8 @@ var deptModel=require("../model/dept_model");
 var docModel=require("../model/doctor_model");
 var orderModel=require("../model/order_model");
 var userModel=require("../model/user_model");
-var cos=require("../cos-nodejs-sdk/sdk/cos");
-var config=require("../cos-nodejs-sdk/sdk/config");
+//var cos=require("../cos-nodejs-sdk/sdk/cos");
+//var config=require("../cos-nodejs-sdk/sdk/config");
 var crypto = require('crypto');
 var querString=require('querystring');
 var rq=require("request");
@@ -32,6 +32,7 @@ var resData="";
 //test index
 router.get('/', require('./welcome'));
 router.get('/user', require('./user'));
+router.get('/login', require('./login'));
 router.all('/tunnel', require('./tunnel'));
 
 // //find comment record by page size
