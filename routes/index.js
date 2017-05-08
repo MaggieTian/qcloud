@@ -45,7 +45,7 @@ router.all('/tunnel', require('./tunnel'));
 //     db.on('error', console.error.bind(console, 'connection error:'));
 //     db.once('open', function() {
 //         console.log("db  connection success!");
-//     });
+//     };
 //
 //     var query=comment.find({});
 //     var size=(parseInt(cnt)-1)*5;
@@ -545,7 +545,7 @@ router.post("/upadetPayment",function (req,res) {
 });
 
 router.post("/register",function (req,res) {
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db=mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
@@ -601,7 +601,7 @@ router.post("/register",function (req,res) {
 router.post('/login',function (req,res) {
 
 
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db=mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
@@ -632,7 +632,7 @@ router.post('/login',function (req,res) {
 
 });
 router.get("/getAltitude",function (req,res) {
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db=mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
@@ -664,7 +664,7 @@ router.get("/getAltitude",function (req,res) {
 });
 //根据医联卡查询挂号信息
 router.post("/getOrder",function (req,res) {
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db=mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
@@ -692,7 +692,7 @@ router.post("/getOrder",function (req,res) {
 //添加提醒事件
 router.post("/addRemind",function (req,res) {
 
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db = mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
@@ -737,7 +737,7 @@ router.post("/addRemind",function (req,res) {
 
 //根据身份证号码查询用户的提醒事项
 router.post("/getReminder",function (req,res) {
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db = mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
@@ -758,7 +758,7 @@ router.post("/getReminder",function (req,res) {
 });
 //删除提醒事件
 router.post("/delelteReminder",function (req,res) {
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db = mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
@@ -788,7 +788,7 @@ router.post("/delelteReminder",function (req,res) {
 //修改个人邮箱和电话号码信息
 router.post("/updateInfo",function (req,res) {
 
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db = mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
@@ -1002,7 +1002,7 @@ router.get("/verifyCode",function (req,res) {
 
 //    准备测试数据
 router.get("/generateData",function (req,res) {
-    mongoose.connect("mongodb://123.206.122.252:27017/hospital");
+    mongoose.connect("mongodb://localhost/hospital");
     var db = mongoose.connection;
 
     db.on('error', console.error.bind(console, 'connection error:'));
